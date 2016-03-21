@@ -7,8 +7,23 @@ var data = {
   userId: 1,
 }
 
-//Like.insert(data);
+Like.insert(data);
 
+/*
+DB = require('./lib/db');
+
+DB.connect()
+        .then(function (db) {
+           return db.collection('configs').insertOne({
+             'name':'transaction',
+             'lockAt': null,
+             'collections': []
+           });
+        })
+        .then(DB.close);
+*/
+
+/*
 promise1 = new Promise(function (resolve, reject) {
   return resolve('1k');
 });
@@ -29,3 +44,4 @@ promise1.then(function () {
 }).then(function () {
   console.log('finally, last then')
 })
+*/
