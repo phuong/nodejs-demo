@@ -1,14 +1,38 @@
 var Promise = require('promise');
-
+var DB = require('./lib/db');
 var Like = require('./lib/like');
 
-var data = {
+/*
+var data1 = {
   productId: 1,
   userId: 1,
 }
 
-Like.insert(data);
 
+Like.insert(data1);
+*/
+
+data2 = {
+  productId: 2,
+  userId: 1,
+  productName: 'Product 2'
+}
+
+/*
+DB.connect()
+        .then(function (db) {
+            return db.collection('products').insertOne({
+              productName: data2.productName,
+              countLike: 0
+            });
+        })
+*/
+
+
+Like.insert(data2);
+
+
+//DB.close();
 /*
 DB = require('./lib/db');
 
