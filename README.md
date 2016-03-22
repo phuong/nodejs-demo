@@ -24,6 +24,11 @@ run the app:
     $ DEBUG=nodejs-demo:* npm start
 ```
 
+run test:
+```
+    $ npm test
+```
+
 
 ### How to use?
 Take a look at lib/like.js, We define a `process` function, it will receive DB instance and a promise instance.
