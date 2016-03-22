@@ -1,5 +1,5 @@
 {
-  "name": "minh",
+  "name": "nodejsdemo",
   "database": {
     "host": "localhost",
     "port": "27017",
