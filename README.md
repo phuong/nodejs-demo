@@ -24,8 +24,12 @@ run the app:
     $ DEBUG=nodejs-demo:* npm start
 ```
 
+
 ### How to use?
 Take a look at lib/like.js, We define a `process` function, it will receive DB instance and a promise instance.
+And `process` contains all update-database actions. In any case of error, we just throw it out and
+Transaction will revert to previous version of collections.
+
 
 ```javascript
 var Transaction = require('./transaction');
