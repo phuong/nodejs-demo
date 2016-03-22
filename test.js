@@ -3,7 +3,6 @@ var DB = require('./lib/db');
 var Like = require('./lib/like');
 var Product = require('./lib/product');
 
-
 data1 = {
   productId: 1,
   userId: 1,
@@ -16,6 +15,9 @@ data2 = {
   name: 'Product 1',
   makeException: true
 }
+
+
+
 
 Product.has(data1.productId).then(function (doc) {
   if(!doc) {

@@ -21,7 +21,7 @@ install dependencies:
 
 run the app:
 ```
-    $ DEBUG=nodejs-demo:* npm start
+    $ DEBUG=app:* npm start
 ```
 Open http://localhost:3000 to view demo screen.
 
