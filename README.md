@@ -23,3 +23,27 @@ run the app:
 ```
     $ DEBUG=nodejs-demo:* npm start
 ```
+
+### How to use?
+Take a look at lib/like.js, We define a `process` function, it will receive DB instance and a promise instance.
+
+```javascript
+var Transaction = require('./transaction');
+
+exports = module.exports;
+
+exports.save = function (data, callback) {
+  data.productId = parseInt(data.productId);
+  function process (DB, promise) {
+    return promise.then(function () {
+      if (data.hasOwnProperty('makeException')) {
+        throw Error('Some exception when insert new like');
+      }
+      return DB.getCollection('likes').insertOne(/*data*/);
+    }).then(function () {
+      return DB.getCollection('products').update(/*data*/)
+    });
+  }
+  return Transaction.start(['products', 'likes'], process, callback);
+}
+```
