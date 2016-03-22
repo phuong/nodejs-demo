@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Nodejs mongodb transaction demo</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %> and TEO</p>
+    <div class="container">
+      <% products.forEach(function(product) { %>
+          <div class="product-item">
+              <div class="inner center">
+                <%= product.name %> 
+                
+              </div>
+          <div class="right clearfix">
+            <span class="like pointer" data-id="<%= product.productId %>" data-name="<%= product.name %>">
+              <span id="like<%= product.productId %>"><%= product.countLike %></span>
+              Like
+            </span>
+          </div>
+          </div>
+      <% }); %>
+
+    </div>
   </body>
+  <script type='text/javascript' src='/jquery.min.js'></script>
+  <script type='text/javascript' src='/index.js'></script>
 </html>

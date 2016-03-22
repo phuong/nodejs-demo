@@ -6,7 +6,7 @@
   "scripts": {
     "init": "node ./bin/init",
     "start": "node ./bin/www",
-    "test": "node ./bin/test"
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "express": "~4.13.1",
     "mongodb": "^2.1.7",
     "morgan": "~1.6.1",
+    "on-finished": "^2.3.0",
     "promise": "^7.1.1",
     "serve-favicon": "~2.3.0"
   }
