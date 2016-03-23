@@ -27,7 +27,7 @@ Open http://localhost:3000 to view demo screen.
 
 run test:
 ```
-    $ npm test
+    $ DEBUG=app:* npm test
 ```
 
 
